@@ -44,13 +44,15 @@ private totalnota Note;
     
     totalnota nueva = new totalnota(cantidad);
         if (nueva.getSiguiente()==null) {
-           Note=nueva;
-           Note.setSiguiente(nueva);
-           nueva=Note;
+          Note=nueva;
+Note.setAnteroir(null);
+          /* Note.setSiguiente(nueva);
+           nueva=Note;*/
         } else {
             totalnota aux=Note;
-            Note=nueva;
-            nueva.setSiguiente(Note);
+           // Note=nueva;
+            Note.setSiguiente(nueva);
+           Note.setAnteroir(aux);
             
         }
         

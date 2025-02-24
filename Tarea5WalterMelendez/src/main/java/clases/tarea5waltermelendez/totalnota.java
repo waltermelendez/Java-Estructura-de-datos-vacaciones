@@ -11,13 +11,23 @@ package clases.tarea5waltermelendez;
 public class totalnota {
     private int nota;
     private totalnota siguiente;
+    private totalnota anteroir;
     public int getNota() {
         return nota;
     }
 
     public totalnota(int nota) {
         this.nota = nota;
-        this.siguiente = siguiente;
+        this.siguiente = null;
+        this.anteroir= null;
+    }
+
+    public totalnota getAnteroir() {
+        return anteroir;
+    }
+
+    public void setAnteroir(totalnota anteroir) {
+        this.anteroir = anteroir;
     }
 
     public void setNota(int nota) {
